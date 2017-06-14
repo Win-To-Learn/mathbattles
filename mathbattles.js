@@ -1,6 +1,8 @@
 /**
- * Created by jonathanmar, jdarylmon on 10/17/16.
- *
+<<<<<<< HEAD
+=======
+ * Created by jonathanmar, michelleuy, jdarylmon on 10/17/16.
+>>>>>>> 78e0b23710bcebfeb920bb9c371af210d7638791
  */
 
 //initialize app to be a function handler you can supply to
