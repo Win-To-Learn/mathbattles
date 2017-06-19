@@ -11,9 +11,9 @@ var app = require('express')();
 var counter = 0;
 var question_counter = 0;
 
-var questions = [" QUESTION: 2+2x0= ___ ? "," QUESTION: 2(2+2x0)= ___ ? "," QUESTION: 2(2+2x0)+3= ___ ? "];
+var questions = [" QUESTION: 2+2x0= ___ ? "," QUESTION: 2(2+2x0)= ___ ? "," QUESTION: 2(2+2x0)+3= ___ ? "," QUESTION: 2(2+2x0)+3(3)= ___ ? "];
 
-var answers = [2,4,7];
+var answers = [2,4,7,13];
 
 var q_a = [questions[question_counter],answers[question_counter]];
 
