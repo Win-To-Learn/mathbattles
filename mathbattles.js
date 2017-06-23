@@ -82,16 +82,19 @@ io.on('connection', function(socket){
 //below is an event listener
 
 //io is pulling the strings on all the client sockets
+
+
+
 io.on('connection', function(socket){
     //as soon as the client sends a message of a particular type with the specfic text 'chat message' 
-    //do something
-    
+    //do
     
     //when this event happens on the socket side
     //pass in a function that responds and can make use of the message contents
     socket.on('chat message', function(msg){
-        
-        
+
+
+
         //i think because this is coming from the server it goes to everyone
         io.emit('chat message', msg);
         if (msg == 'r' + answers[question_counter]){
@@ -105,9 +108,9 @@ io.on('connection', function(socket){
             x += 30;
 
 
-            if (x>599){
+            if (x==350){
                 io.emit('chat message', "Team 1 Wins!!!!");
-                x=300;
+                x=700;
                 //console.log("right wins");
             }
         }
@@ -120,13 +123,13 @@ io.on('connection', function(socket){
             q_a = [questions[question_counter],answers[question_counter]];
             io.emit('l team point', q_a);
             x -= 30;
-            if (x<1){
+            if (x==350){
                 io.emit('chat message', "Team 2 Wins!!!!");
-                x=300;
+                x=100;
             }
         }
     });
-    
+
     //for every socket that connect, they are listening for the join key
     //when they hear it take the data object and run this function
     socket.on('join',function(data){
@@ -139,10 +142,10 @@ io.on('connection', function(socket){
         socket.emit('starting x',x);
         q_a = [questions[question_counter],answers[question_counter]];
         socket.emit('current question',q_a);
-        
+
         //io.emit()
     });
-    
+
     socket.on('disconnect',function(){
         counter -= 1;
         console.log("client disconnected");
