@@ -20,7 +20,7 @@ var q_a = [questions[question_counter],answers[question_counter]];
 var hostname = '0.0.0.0';
 var port = process.env.PORT || 3000;
 
-var x = 300;
+var x = 0;
 
 var clients = [];
 //the app object which serves as a function handler is
